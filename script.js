@@ -1,38 +1,20 @@
-function myFirstApp(name, age) {
-   /*  alert(`Привет, меня зовут ${name} и это моя первая программа!`); */
+"use strict";
+const numberOfFilms= +prompt('Сколько фильмов вы уже посмотрели?', '');
 
-     function showSkills() {
-         let skills = ['html', 'css', 'js', 'java','c#', 'php'];
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
 
-            document.writeln('Я владею : ');
-         for (let i=0; i < skills.length; i++) {
-             document.write(skills[i]+ ' ');
-         }
-                 
-     }
+const a = prompt('Один из последних просмотренных фильмов?', ''),
+      b = prompt('На сколько оцените его?', ''),
+      c = prompt('Один из последних просмотренных фильмов?', ''),
+      d = prompt('На сколько оцените его?', '');
 
-     function checkAge(age) {
-        
-        if (age > 18) {
-            document.write(' У тебя хорошие шансы в Frontend');
-        }
-        else {
-            document.write('Круто, что тебе всего ' + age);
-        }
-     }
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
 
-     function calcPow(num){
-        return num*num;
-     }
-
-
-     showSkills();
-     checkAge(age);
-     console.log('Квадрат числа равен : ' + calcPow(4));
-
-}
-
-/* myFirstApp('Eugenia', 20);*/
-
-
-
+console.log(personalMovieDB);
